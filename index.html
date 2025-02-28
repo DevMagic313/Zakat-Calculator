@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple Zakat calculator to help you determine your Zakat obligation accurately.">
+    <link rel="shortcut icon" href="fav.jpg" type="image/x-icon">
+    <title>Zakat Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container islamic-border">
+        <div class="header">
+            <h1><i class="fas fa-calculator"></i> Zakat Calculator</h1>
+            <p>Calculate your Zakat obligation accurately</p>
+        </div>
+
+        <div class="input-group" style="animation-delay: 0.1s;">
+            <label><i class="fas fa-coins"></i> Cash & Savings</label>
+            <input type="number" id="cash" placeholder="Enter amount">
+        </div>
+
+        <div class="input-group" style="animation-delay: 0.2s;">
+            <label><i class="fas fa-medal"></i> Gold Value</label>
+            <input type="number" id="gold" placeholder="Enter gold value">
+        </div>
+
+        <div class="input-group" style="animation-delay: 0.3s;">
+            <label><i class="fas fa-briefcase"></i> Business Investments</label>
+            <input type="number" id="business" placeholder="Enter business investments">
+        </div>
+
+        <div class="input-group" style="animation-delay: 0.4s;">
+            <label><i class="fas fa-box-open"></i> Other Assets</label>
+            <input type="number" id="other" placeholder="Enter other assets">
+        </div>
+
+        <div class="input-group" style="animation-delay: 0.5s;">
+            <label><i class="fas fa-scroll"></i> Total Debts</label>
+            <input type="number" id="debts" placeholder="Enter total debts">
+        </div>
+
+        <div class="nisab-note">
+            <div class="input-group" style="animation-delay: 0.6s;">
+                <label><i class="fas fa-weight-hanging"></i> Gold Price/Gram</label>
+                <input type="number" id="goldPrice" placeholder="Enter current gold price">
+            </div>
+            <div class="input-group" style="animation-delay: 0.7s;">
+                <label><i class="fas fa-weight"></i> Silver Price/Gram</label>
+                <input type="number" id="silverPrice" placeholder="Enter current silver price">
+            </div>
+        </div>
+
+        <div class="results">
+            <div class="result-item">
+                <span><i class="fas fa-wallet"></i> Total Assets:</span>
+                <span id="totalAssets" class="highlight">0.00</span>
+            </div>
+            <div class="result-item">
+                <span><i class="fas fa-hand-holding-usd"></i> Total Debts:</span>
+                <span id="totalDebts" class="highlight">0.00</span>
+            </div>
+            <div class="result-item">
+                <span><i class="fas fa-balance-scale"></i> Net Wealth:</span>
+                <span id="netWealth" class="highlight">0.00</span>
+            </div>
+            <div class="result-item">
+                <span><i class="fas fa-scale-balanced"></i> Nisab Threshold:</span>
+                <span id="nisab" class="highlight">0.00</span>
+            </div>
+            <div class="result-item">
+                <span><i class="fas fa-hand-holding-heart"></i> Zakat Payable:</span>
+                <span id="zakatPayable" class="highlight">No</span>
+            </div>
+            <div class="result-item">
+                <span><i class="fas fa-donate"></i> Zakat Due (2.5%):</span>
+                <span id="zakatAmount" class="highlight">0.00</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
